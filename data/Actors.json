@@ -1,7 +1,7 @@
 [
 null,
 {"id":1,"battlerName":"Estin1","characterIndex":0,"characterName":"Estin1","classId":9,"equips":[2,0,0,3,0],"faceIndex":0,"faceName":"Estin1","traits":[{"code":31,"dataId":3,"value":1},{"code":11,"dataId":1,"value":0.8},{"code":11,"dataId":2,"value":0.8},{"code":11,"dataId":3,"value":1.2},{"code":11,"dataId":4,"value":1}],"initialLevel":1,"maxLevel":99,"name":"Estin","nickname":"","note":"","profile":""},
-{"id":2,"battlerName":"","characterIndex":0,"characterName":"","classId":1,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"","nickname":"","note":"","profile":""},
+{"id":2,"battlerName":"","characterIndex":0,"characterName":"","classId":10,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"面包姬","nickname":"","note":"","profile":"因为不明原因被吊起来的机娘，对面包有着超常的执着"},
 {"id":3,"battlerName":"","characterIndex":0,"characterName":"","classId":1,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"","nickname":"","note":"","profile":""},
 {"id":4,"battlerName":"","characterIndex":0,"characterName":"","classId":1,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"","nickname":"","note":"","profile":""}
 ]

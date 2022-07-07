@@ -1948,6 +1948,7 @@ Game_Action.prototype.makeDamageValue = function(target, critical) {
     }
     value = this.applyVariance(value, item.damage.variance);
     value = this.applyGuard(value, target);
+	value = this.applyShield(value, target);
     value = Math.round(value);
     return value;
 };
@@ -1996,6 +1997,15 @@ Game_Action.prototype.applyVariance = function(damage, variance) {
 Game_Action.prototype.applyGuard = function(damage, target) {
     return damage / (damage > 0 && target.isGuard() ? 2 * target.grd : 1);
 };
+
+Game_Action.prototype.applyShield = function(damage,target)
+{
+	var damVal = damage - target.mp;
+	if (damVal <=0) damVal = 0;
+	target.mp -= damage;
+	if(target.mp <=0) target.mp = 0;
+	return damVal;
+}
 
 Game_Action.prototype.executeDamage = function(target, value) {
     const result = target.result();
@@ -2493,6 +2503,15 @@ Object.defineProperties(Game_BattlerBase.prototype, {
         },
         configurable: true
     },
+	// Shield
+	shd:
+	{
+		get: function()
+		{
+			return this.param(8);
+		},
+		configurable: true
+	},
     // HIT rate
     hit: {
         get: function() {

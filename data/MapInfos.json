@@ -9,6 +9,6 @@ null,
 {"id":7,"expanded":false,"name":"废墟","order":7,"parentId":1,"scrollX":780,"scrollY":534.6666666666666},
 {"id":8,"expanded":false,"name":"废墟民居","order":8,"parentId":1,"scrollX":601.3333333333334,"scrollY":405.3333333333333},
 {"id":9,"expanded":false,"name":"石洞","order":9,"parentId":1,"scrollX":813.3333333333334,"scrollY":1514.6666666666667},
-{"id":10,"expanded":false,"name":"初遇加特林的房间","order":10,"parentId":1,"scrollX":0,"scrollY":0},
-{"id":11,"expanded":false,"name":"军事基地内部","order":11,"parentId":1,"scrollX":793.3333333333334,"scrollY":561.3333333333334}
+{"id":10,"expanded":false,"name":"初遇加特林的房间","order":10,"parentId":1,"scrollX":601.3333333333334,"scrollY":405.3333333333333},
+{"id":11,"expanded":false,"name":"军事基地内部","order":11,"parentId":1,"scrollX":782.6666666666666,"scrollY":765.3333333333334}
 ]

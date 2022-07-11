@@ -26,6 +26,6 @@ null,
 {"id":24,"expanded":false,"name":"初遇加特林的房间","order":17,"parentId":20,"scrollX":432,"scrollY":304},
 {"id":25,"expanded":false,"name":"洞穴-数据碎片3","order":11,"parentId":12,"scrollX":451,"scrollY":312},
 {"id":26,"expanded":false,"name":"记忆-？？？","order":26,"parentId":8,"scrollX":451,"scrollY":368},
-{"id":27,"expanded":false,"name":"记忆-安定","order":27,"parentId":8,"scrollX":674,"scrollY":887.5},
-{"id":28,"expanded":false,"name":"记忆-毁灭","order":28,"parentId":8,"scrollX":557,"scrollY":320}
+{"id":27,"expanded":false,"name":"记忆-安定","order":27,"parentId":8,"scrollX":674,"scrollY":896},
+{"id":28,"expanded":false,"name":"记忆-毁灭","order":28,"parentId":8,"scrollX":451,"scrollY":320}
 ]

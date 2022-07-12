@@ -11,3 +11,6 @@
  * HELP!!!!
  *
  */
+var Add_Buff = function (buff, strength) {
+
+}

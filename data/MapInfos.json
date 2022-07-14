@@ -10,7 +10,7 @@ null,
 {"id":8,"expanded":true,"name":"艾斯汀剧情相关","order":21,"parentId":0,"scrollX":451,"scrollY":312},
 {"id":9,"expanded":false,"name":"碎片3-废墟","order":8,"parentId":12,"scrollX":834,"scrollY":627.3333333333334},
 {"id":10,"expanded":false,"name":"碎片3-幕间","order":9,"parentId":12,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
-{"id":11,"expanded":false,"name":"军事基地内部","order":22,"parentId":8,"scrollX":832,"scrollY":748},
+{"id":11,"expanded":false,"name":"军事基地内部","order":22,"parentId":8,"scrollX":823.3333333333334,"scrollY":615.3333333333334},
 {"id":12,"expanded":true,"name":"回忆-数据碎片","order":4,"parentId":0,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":13,"expanded":false,"name":"碎片4-废墟","order":14,"parentId":12,"scrollX":823,"scrollY":677},
 {"id":14,"expanded":false,"name":"碎片1-草原废墟","order":5,"parentId":12,"scrollX":834,"scrollY":640.6666666666666},
@@ -31,5 +31,5 @@ null,
 {"id":29,"expanded":true,"name":"碎片4-洞穴深处","order":12,"parentId":12,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":30,"expanded":false,"name":"碎片4-幕间","order":11,"parentId":12,"scrollX":816,"scrollY":640},
 {"id":31,"expanded":false,"name":"碎片4-道中","order":13,"parentId":12,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
-{"id":32,"expanded":false,"name":"草原废墟","order":32,"parentId":8,"scrollX":754.2857142857142,"scrollY":576.8571428571428}
+{"id":32,"expanded":false,"name":"草原废墟","order":32,"parentId":8,"scrollX":834,"scrollY":576.6666666666666}
 ]

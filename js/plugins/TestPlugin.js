@@ -15,5 +15,5 @@ var Add_Buff = function (buff, strength) {
 
 }
 class ThisBuff {
-
+    
 }

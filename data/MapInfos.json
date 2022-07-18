@@ -39,8 +39,9 @@ null,
 {"id":37,"expanded":false,"name":"记忆-第一次尝试","order":33,"parentId":8,"scrollX":823.3333333333334,"scrollY":782},
 {"id":38,"expanded":true,"name":"序章","order":38,"parentId":0,"scrollX":0,"scrollY":0},
 {"id":39,"expanded":false,"name":"康复室","order":39,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
-{"id":40,"expanded":true,"name":"过道","order":40,"parentId":38,"scrollX":0,"scrollY":0},
+{"id":40,"expanded":true,"name":"三楼过道","order":40,"parentId":38,"scrollX":0,"scrollY":0},
 {"id":41,"expanded":false,"name":"307康复室","order":41,"parentId":38,"scrollX":0,"scrollY":0},
 {"id":42,"expanded":false,"name":"第三单元人型工具储藏室","order":42,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
-{"id":43,"expanded":false,"name":"被毁坏的二楼房间","order":43,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333}
+{"id":43,"expanded":false,"name":"被毁坏的二楼房间","order":43,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
+{"id":44,"expanded":true,"name":"二楼过道","order":44,"parentId":38,"scrollX":0,"scrollY":0}
 ]

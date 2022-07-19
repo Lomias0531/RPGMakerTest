@@ -31,9 +31,9 @@ null,
 {"id":29,"expanded":true,"name":"碎片4-洞穴深处","order":12,"parentId":12,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":30,"expanded":false,"name":"碎片4-幕间","order":11,"parentId":12,"scrollX":816,"scrollY":640},
 {"id":31,"expanded":false,"name":"碎片4-道中","order":13,"parentId":12,"scrollX":823.6363636363636,"scrollY":331.6363636363636},
-null,
+{"id":32,"expanded":false,"name":"森林小镇","order":45,"parentId":45,"scrollX":576,"scrollY":1024},
 {"id":33,"expanded":false,"name":"基地-初","order":42,"parentId":45,"scrollX":541.1999999999999,"scrollY":492},
-{"id":34,"expanded":false,"name":"基地-帐篷","order":43,"parentId":45,"scrollX":541.1999999999999,"scrollY":374.4},
+{"id":34,"expanded":false,"name":"基地-帐篷","order":43,"parentId":45,"scrollX":576,"scrollY":405.3333333333333},
 {"id":35,"expanded":false,"name":"基地-二楼","order":44,"parentId":45,"scrollX":550.8,"scrollY":464.4},
 {"id":36,"expanded":false,"name":"记忆-略微平静的日常","order":32,"parentId":8,"scrollX":601.3333333333334,"scrollY":405.3333333333333},
 {"id":37,"expanded":false,"name":"记忆-第一次尝试","order":33,"parentId":8,"scrollX":832,"scrollY":1280},
@@ -44,5 +44,5 @@ null,
 {"id":42,"expanded":false,"name":"第三单元人型工具储藏室","order":38,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":43,"expanded":false,"name":"被毁坏的二楼房间","order":39,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":44,"expanded":true,"name":"二楼过道","order":40,"parentId":38,"scrollX":0,"scrollY":0},
-{"id":45,"expanded":false,"name":"世界地图 1","order":41,"parentId":0,"scrollX":3441,"scrollY":3802.5}
+{"id":45,"expanded":true,"name":"世界地图 1","order":41,"parentId":0,"scrollX":3430.6666666666665,"scrollY":3684}
 ]

@@ -31,7 +31,7 @@ null,
 {"id":29,"expanded":true,"name":"碎片4-洞穴深处","order":12,"parentId":12,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":30,"expanded":false,"name":"碎片4-幕间","order":11,"parentId":12,"scrollX":816,"scrollY":640},
 {"id":31,"expanded":false,"name":"碎片4-道中","order":13,"parentId":12,"scrollX":823.6363636363636,"scrollY":331.6363636363636},
-{"id":32,"expanded":false,"name":"森林小镇","order":51,"parentId":45,"scrollX":835.3333333333334,"scrollY":1323.3333333333333},
+{"id":32,"expanded":false,"name":"森林小镇","order":51,"parentId":45,"scrollX":825.3333333333334,"scrollY":1248},
 {"id":33,"expanded":false,"name":"基地-初","order":49,"parentId":45,"scrollX":823.3333333333334,"scrollY":492.6666666666667},
 {"id":34,"expanded":false,"name":"基地-帐篷","order":48,"parentId":45,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":35,"expanded":false,"name":"基地-二楼","order":50,"parentId":45,"scrollX":834,"scrollY":464.6666666666667},
@@ -49,7 +49,7 @@ null,
 {"id":47,"expanded":false,"name":"康复大厅","order":42,"parentId":38,"scrollX":751.5,"scrollY":468.75},
 {"id":48,"expanded":false,"name":"四楼电梯井","order":43,"parentId":38,"scrollX":823.3333333333334,"scrollY":452.6666666666667},
 {"id":49,"expanded":false,"name":"电梯内部","order":44,"parentId":38,"scrollX":0,"scrollY":0},
-{"id":50,"expanded":false,"name":"电梯井-食品加工厂前","order":45,"parentId":38,"scrollX":823.3333333333334,"scrollY":452.6666666666667},
+{"id":50,"expanded":false,"name":"电梯井-食品加工厂前","order":45,"parentId":38,"scrollX":638.6666666666666,"scrollY":416},
 null,
-{"id":52,"expanded":false,"name":"食品加工厂","order":46,"parentId":38,"scrollX":823.3333333333334,"scrollY":598}
+{"id":52,"expanded":false,"name":"食品加工厂","order":46,"parentId":38,"scrollX":649.3333333333334,"scrollY":598.6666666666666}
 ]

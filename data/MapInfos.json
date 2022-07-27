@@ -31,7 +31,7 @@ null,
 {"id":29,"expanded":true,"name":"碎片4-洞穴深处","order":12,"parentId":12,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":30,"expanded":false,"name":"碎片4-幕间","order":11,"parentId":12,"scrollX":816,"scrollY":640},
 {"id":31,"expanded":false,"name":"碎片4-道中","order":13,"parentId":12,"scrollX":823.6363636363636,"scrollY":331.6363636363636},
-{"id":32,"expanded":false,"name":"森林小镇","order":57,"parentId":45,"scrollX":824.6666666666666,"scrollY":950},
+{"id":32,"expanded":true,"name":"森林小镇","order":57,"parentId":45,"scrollX":825.3333333333334,"scrollY":1313.3333333333333},
 {"id":33,"expanded":false,"name":"基地-初","order":55,"parentId":45,"scrollX":823.3333333333334,"scrollY":492.6666666666667},
 {"id":34,"expanded":false,"name":"基地-帐篷","order":54,"parentId":45,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":35,"expanded":false,"name":"基地-二楼","order":56,"parentId":45,"scrollX":834,"scrollY":464.6666666666667},
@@ -56,5 +56,6 @@ null,
 {"id":54,"expanded":false,"name":"过道-主控室","order":49,"parentId":38,"scrollX":0,"scrollY":0},
 {"id":55,"expanded":false,"name":"主控室扫描间","order":50,"parentId":38,"scrollX":0,"scrollY":0},
 {"id":56,"expanded":false,"name":"扫描间室内","order":51,"parentId":38,"scrollX":0,"scrollY":0},
-{"id":57,"expanded":false,"name":"主控室","order":52,"parentId":38,"scrollX":823.3333333333334,"scrollY":650}
+{"id":57,"expanded":false,"name":"主控室","order":52,"parentId":38,"scrollX":649.3333333333334,"scrollY":650},
+{"id":58,"expanded":false,"name":"小镇民居1","order":58,"parentId":32,"scrollX":638.6666666666666,"scrollY":405.3333333333333}
 ]

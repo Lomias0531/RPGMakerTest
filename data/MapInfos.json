@@ -56,6 +56,6 @@ null,
 {"id":54,"expanded":false,"name":"过道-主控室","order":49,"parentId":38,"scrollX":0,"scrollY":0},
 {"id":55,"expanded":false,"name":"主控室扫描间","order":50,"parentId":38,"scrollX":0,"scrollY":0},
 {"id":56,"expanded":false,"name":"扫描间室内","order":51,"parentId":38,"scrollX":0,"scrollY":0},
-{"id":57,"expanded":false,"name":"主控室","order":52,"parentId":38,"scrollX":649.3333333333334,"scrollY":650},
+{"id":57,"expanded":false,"name":"主控室","order":52,"parentId":38,"scrollX":823.3333333333334,"scrollY":550},
 {"id":58,"expanded":false,"name":"小镇民居1","order":58,"parentId":32,"scrollX":638.6666666666666,"scrollY":405.3333333333333}
 ]

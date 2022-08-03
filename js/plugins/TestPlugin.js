@@ -9,33 +9,33 @@
  * @help
  *
  * HELP!!!!
+ * 
+ * @param ItemID
+ * @desc Item to check
+ * @default 0
+ * 
+ * @param ItemNum
+ * @desc Item num required
+ * @default 0
  *
  */
-var Add_Buff = function (buff, strength) {
-
+var CheckSingleItemRequired = function (id, num) {
+    if ($gameParty.numItems($dataItems[id]) >= num) {
+        return true;
+    } else {
+        return false;
+    }
 }
-class ThisBuff {
-    
-}
 
-Game_Action.prototype.makeDamageValue = function (target, critical) {
-    const item = this.item();
-    const baseValue = this.evalDamageFormula(target);
-    let value = baseValue * this.calcElementRate(target);
-    if (this.isPhysical()) {
-        value *= target.pdr;
+var CheckItemListRequired = function (items) {
+    let str = items;
+    var arr = str.split('|');
+    for (var i = 0; i < arr.length; i++)
+    {
+        var arr1 = arr[i].split(',');
+        if ($gameParty.numItems($dataItems[arr1[0]]) < arr1[1]) {
+            return false;
+        }
     }
-    if (this.isMagical()) {
-        value *= target.mdr;
-    }
-    if (baseValue < 0) {
-        value *= target.rec;
-    }
-    if (critical) {
-        value = this.applyCritical(value);
-    }
-    value = this.applyVariance(value, item.damage.variance);
-    value = this.applyGuard(value, target);
-    value = Math.round(value);
-    return value;
-};
+    return true;
+}

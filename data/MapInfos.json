@@ -1,6 +1,6 @@
 [
 null,
-{"id":1,"expanded":true,"name":"大地图测试","order":1,"parentId":0,"scrollX":718.5,"scrollY":456},
+{"id":1,"expanded":false,"name":"大地图测试","order":1,"parentId":0,"scrollX":718.5,"scrollY":456},
 {"id":2,"expanded":false,"name":"室内地图测试1","order":2,"parentId":1,"scrollX":676.5,"scrollY":468},
 {"id":3,"expanded":false,"name":"过场动画测试","order":3,"parentId":1,"scrollX":676.5,"scrollY":456},
 {"id":4,"expanded":false,"name":"轨道炮打击测试","order":28,"parentId":8,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
@@ -44,7 +44,7 @@ null,
 {"id":42,"expanded":false,"name":"第三单元人型工具储藏室","order":38,"parentId":38,"scrollX":823.3333333333334,"scrollY":452.6666666666667},
 {"id":43,"expanded":false,"name":"被毁坏的二楼房间","order":39,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":44,"expanded":true,"name":"二楼过道","order":40,"parentId":38,"scrollX":0,"scrollY":0},
-{"id":45,"expanded":true,"name":"世界地图 1","order":53,"parentId":0,"scrollX":3866,"scrollY":3770},
+{"id":45,"expanded":true,"name":"世界地图 1","order":53,"parentId":0,"scrollX":3865.5,"scrollY":3769.5},
 {"id":46,"expanded":false,"name":"第二单元人型工具储藏室","order":41,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":47,"expanded":false,"name":"康复大厅","order":42,"parentId":38,"scrollX":751.5,"scrollY":468.75},
 {"id":48,"expanded":false,"name":"四楼电梯井","order":43,"parentId":38,"scrollX":823.3333333333334,"scrollY":452.6666666666667},
@@ -59,5 +59,5 @@ null,
 {"id":57,"expanded":false,"name":"主控室","order":52,"parentId":38,"scrollX":823.3333333333334,"scrollY":550},
 {"id":58,"expanded":false,"name":"小镇民居1","order":58,"parentId":32,"scrollX":638.6666666666666,"scrollY":405.3333333333333},
 {"id":59,"expanded":false,"name":"战棋战场测试","order":60,"parentId":0,"scrollX":958,"scrollY":624},
-{"id":60,"expanded":false,"name":"避难所地表","order":59,"parentId":45,"scrollX":937.5,"scrollY":468.75}
+{"id":60,"expanded":false,"name":"避难所地表","order":59,"parentId":45,"scrollX":961.5,"scrollY":744}
 ]

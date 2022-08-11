@@ -21,15 +21,10 @@
  *
  */
 
-const url = "js/plugins/ActorIDtoFacePath.js";
+//使用官方js方法装载字典插件
+const url = "ActorIDtoFacePath";
+PluginManager.loadScript(url);
 
-
-function addScript(url) {
-    var script = document.createElement('script');
-    script.setAttribute('type', 'text/javascript');
-    script.setAttribute('src', url);
-    document.getElementsByTagName('head')[0].appendChild(script);
-}
 //检查当前物品是否用在正确的角色身上，ActorID为目标角色的ID
 var CheckItemAim = function (ActorID) {
     if ($gameParty._targetActorId == ActorID) {
@@ -38,9 +33,10 @@ var CheckItemAim = function (ActorID) {
         return false;
     }
 }
-//待开发
+//快速创建带脸图的对话框
 var quickMessage = function (actorID, faceID, message) {
     message = String(message);
-    $gameMessage.setFaceImage(getFacePath(actorID), faceID);
+    $gameMessage.setSpeakerName();
+    $gameMessage.setFaceImage(facePath[actorID-1], faceID);
     $gameMessage.add(message);
 }

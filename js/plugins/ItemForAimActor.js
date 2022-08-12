@@ -36,7 +36,13 @@ var CheckItemAim = function (ActorID) {
 //快速创建带脸图的对话框
 var quickMessage = function (actorID, faceID, message) {
     message = String(message);
-    $gameMessage.setSpeakerName();
-    $gameMessage.setFaceImage(facePath[actorID-1], faceID);
+    //$gameMessage.setSpeakerName();
+    //主角没有表情差分，故采用固定脸图
+    if (actorID == 12) {
+        $gameMessage.setFaceImage(facePath[actorID - 1], 5);
+    } else {
+        $gameMessage.setFaceImage(facePath[actorID - 1], faceID);
+    }
+    
     $gameMessage.add(message);
 }

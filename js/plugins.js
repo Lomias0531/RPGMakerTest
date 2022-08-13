@@ -4,5 +4,6 @@ var $plugins =
 [
 {"name":"TestPlugin","status":true,"description":"Test plugin","parameters":{}},
 {"name":"ItemForAimActor","status":true,"description":"This is a Tool plugin","parameters":{"ItemNum":"1","ActorID":"0"}},
-{"name":"ActorIDtoFacePath","status":true,"description":"This is a Tool plugin","parameters":{"actorID":"0","facePath":"0"}}
+{"name":"ActorIDtoFacePath","status":true,"description":"This is a Tool plugin","parameters":{"actorID":"0","facePath":"0"}},
+{"name":"AsyncWait","status":true,"description":"This plugin offer a function to make an async waiting.","parameters":{"time":"0"}}
 ];

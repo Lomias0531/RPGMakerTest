@@ -51,7 +51,7 @@ null,
 {"id":49,"expanded":false,"name":"电梯内部","order":44,"parentId":38,"scrollX":0,"scrollY":0},
 {"id":50,"expanded":false,"name":"电梯井-枢纽","order":45,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":51,"expanded":false,"name":"运转枢纽","order":48,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
-{"id":52,"expanded":false,"name":"食品加工厂","order":46,"parentId":38,"scrollX":823.3333333333334,"scrollY":756.6666666666666},
+{"id":52,"expanded":false,"name":"食品加工厂","order":46,"parentId":38,"scrollX":713,"scrollY":756.5},
 {"id":53,"expanded":false,"name":"过道-食品加工厂","order":47,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":54,"expanded":false,"name":"过道-主控室","order":49,"parentId":38,"scrollX":0,"scrollY":0},
 {"id":55,"expanded":false,"name":"主控室扫描间","order":50,"parentId":38,"scrollX":0,"scrollY":0},
@@ -59,5 +59,5 @@ null,
 {"id":57,"expanded":false,"name":"主控室","order":52,"parentId":38,"scrollX":834,"scrollY":550},
 {"id":58,"expanded":false,"name":"小镇民居1","order":58,"parentId":32,"scrollX":823.3333333333334,"scrollY":452.6666666666667},
 {"id":59,"expanded":false,"name":"战棋战场测试","order":60,"parentId":0,"scrollX":823.3333333333334,"scrollY":624.6666666666666},
-{"id":60,"expanded":false,"name":"避难所地表","order":59,"parentId":45,"scrollX":856.6666666666666,"scrollY":480.6666666666667}
+{"id":60,"expanded":false,"name":"避难所地表","order":59,"parentId":45,"scrollX":821.1428571428571,"scrollY":726.8571428571428}
 ]

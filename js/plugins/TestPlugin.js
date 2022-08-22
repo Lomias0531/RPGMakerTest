@@ -74,7 +74,7 @@ var ResetEstinCombatSkills = function () {
 
     }
 }
-var ExecutrEstinCombatProgram = function () {
+var ExecuteEstinCombatProgram = function () {
 
 }
 var RandomlyDamageEnemy = function () {

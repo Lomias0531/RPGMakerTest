@@ -69,6 +69,21 @@ var SubmitQuestRequestedItems = function (items, rewards) {
     return true;
 }
 
+var ResetEstinCombatSkills = function () {
+    if ($gameTroop._inBattle) {
+
+    }
+}
+var ExecutrEstinCombatProgram = function () {
+
+}
+var RandomlyDamageEnemy = function () {
+
+}
+var RandomlyHealAlly = function () {
+
+}
+
 //用于绘制UI的类
 class WindowDrawer {
     constructor(window) {

@@ -106,7 +106,7 @@ var ExecuteEstinCombatProgram = function () {
         var healingStrength = 0;
         for (var i = 0; i < friends.length; i++) {
             if (friends[i].actorId == 2) {
-                healingStrength = Math.floor(friends[i].atk * (Math.random() * 0.1) + 0.1);
+                healingStrength = Math.floor(friends[i].atk * (Math.random() * 0.5 + 0.5));
             }
         }
         var curFriendHP = $gameParty.aliveMembers()[friendIndex].hp + healingStrength;
@@ -145,7 +145,7 @@ var RandomlyHealAlly = function () {
     var healingStrength = 0;
     for (var i = 0; i < friends.length; i++) {
         if (friends[i].actorId == 2) {
-            healingStrength = Math.floor(friends[i].atk * (Math.random() * 0.1) + 0.1);
+            healingStrength = Math.floor(friends[i].atk * (Math.random() * 0.5 + 0.5));
         }
     }
     var curFriendHP = $gameParty.aliveMembers()[friendIndex].hp + healingStrength;

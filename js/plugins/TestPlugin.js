@@ -78,16 +78,18 @@ var ExecuteEstinCombatProgram = function () {
 
 }
 var RandomlyDamageEnemy = function () {
-    var enemyIndex = Math.floor(Math.random() * $gameTroop.members().length);
-    var enemyID = $gameTroop.members()[enemyIndex].enemyId();
-    var enemyTraits = $dataEnemies[enemyID].traits;
+    var enemyIndex = Math.floor(Math.random() * $gameTroop.members().length); //获取随机敌人索引
+    var enemyID = $gameTroop.members()[enemyIndex].enemyId(); //获取选中敌人的ID
+    var enemyTraits = $dataEnemies[enemyID].traits; //获取选中敌人的特性列表，以数组形式返回
     var damageValue = 0;
     var Friends = $gameParty.members();
+    //获取攻击力数值，并且随机化乘数
     for (var i = 0; i < Friends.length; i++) {
         if (Friends[i].actorId() == 2) {
             damageValue = Math.floor(Friends[i].atk * (0.8 + Math.random() * 0.2));
         }
     }
+    //特性列表code为11是各种抗性的属性，dataId为2代表热能抗性
     for (var i = 0; i < enemyTraits.length; i++) {
         if (enemyTraits[i].code == 11) {
             if (enemyTraits[i].dataId == 2) {
@@ -95,6 +97,7 @@ var RandomlyDamageEnemy = function () {
             }
         }
     }
+    //但是怎么显示伤害数字啊
     var curEnemyHP = $gameTroop.members()[enemyIndex].hp - damageValue;
     $gameTroop.members()[enemyIndex].performDamage(damageValue);
     $gameTroop.members()[enemyIndex].setHp(curEnemyHP);

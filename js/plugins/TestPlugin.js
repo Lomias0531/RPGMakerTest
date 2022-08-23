@@ -78,7 +78,27 @@ var ExecuteEstinCombatProgram = function () {
 
 }
 var RandomlyDamageEnemy = function () {
-
+    var enemyIndex = Math.floor(Math.random() * $gameTroop.members().length);
+    var enemyID = $gameTroop.members()[enemyIndex].enemyId();
+    var enemyTraits = $dataEnemies[enemyID].traits;
+    var damageValue = 0;
+    var Friends = $gameParty.members();
+    for (var i = 0; i < Friends.length; i++) {
+        if (Friends[i].actorId() == 2) {
+            damageValue = Math.floor(Friends[i].atk * (0.8 + Math.random() * 0.2));
+        }
+    }
+    for (var i = 0; i < enemyTraits.length; i++) {
+        if (enemyTraits[i].code == 11) {
+            if (enemyTraits[i].dataId == 2) {
+                damageValue = damageValue * enemyTraits[i].value;
+            }
+        }
+    }
+    var curEnemyHP = $gameTroop.members()[enemyIndex].hp - damageValue;
+    $gameTroop.members()[enemyIndex].performDamage(damageValue);
+    $gameTroop.members()[enemyIndex].setHp(curEnemyHP);
+    return null;
 }
 var RandomlyHealAlly = function () {
 

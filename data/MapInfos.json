@@ -60,6 +60,6 @@ null,
 {"id":58,"expanded":false,"name":"小镇民居1","order":60,"parentId":32,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":59,"expanded":false,"name":"战棋战场测试","order":62,"parentId":0,"scrollX":823.3333333333334,"scrollY":624.6666666666666},
 {"id":60,"expanded":false,"name":"待定地下设施出入口","order":61,"parentId":45,"scrollX":958,"scrollY":624},
-{"id":61,"expanded":false,"name":"管道内","order":54,"parentId":38,"scrollX":1062,"scrollY":722},
+{"id":61,"expanded":false,"name":"管道内","order":54,"parentId":38,"scrollX":1062.5454545454545,"scrollY":721.0909090909091},
 {"id":62,"expanded":false,"name":"机场","order":4,"parentId":1,"scrollX":823.3333333333334,"scrollY":463.3333333333333}
 ]

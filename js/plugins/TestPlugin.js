@@ -84,7 +84,7 @@ var ExecuteEstinCombatProgram = function () {
         //获取攻击力数值，并且随机化乘数
         for (var i = 0; i < Friends.length; i++) {
             if (Friends[i].actorId() == 2) {
-                damageValue = Math.floor(Friends[i].atk * (0.8 + Math.random() * 0.2));
+                damageValue = Math.floor(Friends[i].atk * (0.8 + Math.random() * 0.2) * $gameVariables.value(25));
             }
         }
         //特性列表code为11是各种抗性的属性，dataId为2代表热能抗性
@@ -96,9 +96,7 @@ var ExecuteEstinCombatProgram = function () {
             }
         }
         //但是怎么显示伤害数字啊
-        var curEnemyHP = $gameTroop.members()[enemyIndex].hp - damageValue;
-        $gameTroop.members()[enemyIndex].performDamage(damageValue);
-        $gameTroop.members()[enemyIndex].setHp(curEnemyHP);
+        $gameTroop.members()[enemyIndex].gainHp(damageValue * -1);
     }
     for (var j = 0; j < $gameVariables.value(30); j++) {
         var friendIndex = Math.floor(Math.random() * $gameParty.aliveMembers().length);
@@ -106,11 +104,10 @@ var ExecuteEstinCombatProgram = function () {
         var healingStrength = 0;
         for (var i = 0; i < friends.length; i++) {
             if (friends[i].actorId() == 2) {
-                healingStrength = Math.floor(friends[i].atk * (Math.random() * 0.5 + 0.5));
+                healingStrength = Math.floor(friends[i].atk * (Math.random() * 0.5 + 0.5) * $gameVariables.value(26));
             }
         }
-        var curFriendHP = $gameParty.aliveMembers()[friendIndex].hp + healingStrength;
-        $gameParty.aliveMembers()[friendIndex].setHp(curFriendHP);
+        $gameParty.aliveMembers()[friendIndex].gainHp(healingStrength);
     }
 }
 var RandomlyDamageEnemy = function () {
@@ -134,9 +131,7 @@ var RandomlyDamageEnemy = function () {
         }
     }
     //但是怎么显示伤害数字啊
-    var curEnemyHP = $gameTroop.members()[enemyIndex].hp - damageValue;
-    $gameTroop.members()[enemyIndex].performDamage(damageValue);
-    $gameTroop.members()[enemyIndex].setHp(curEnemyHP);
+    $gameTroop.members()[enemyIndex].gainHp(damageValue * -1);
     return null;
 }
 var RandomlyHealAlly = function () {
@@ -148,8 +143,7 @@ var RandomlyHealAlly = function () {
             healingStrength = Math.floor(friends[i].atk * (Math.random() * 0.5 + 0.5));
         }
     }
-    var curFriendHP = $gameParty.aliveMembers()[friendIndex].hp + healingStrength;
-    $gameParty.aliveMembers()[friendIndex].setHp(curFriendHP);
+    $gameParty.aliveMembers()[friendIndex].gainHp(healingStrength);
 }
 
 //用于绘制UI的类

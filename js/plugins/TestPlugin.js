@@ -158,36 +158,3 @@ var RandomlyHealAlly = function () {
     }
     $gameParty.aliveMembers()[friendIndex].gainHp(healingStrength);
 }
-
-//用于绘制UI的类
-class WindowDrawer {
-    constructor(window) {
-        this._window = window;
-    }
-    //测试，用于显示当前任务细节
-    DisplayQuestInfo = function (info) {
-        this._window.resetFontSettings();
-        const textState = this._window.createTextState(info, 5, 5, 100);
-        const textArray = textState.text.split("");
-        const outTextArray = [];
-        let begin = 0;
-        let turnPoint = 0;
-        for (let i = 0; i < textArray.length; i++) {
-            outTextArray.push(textArray[i]);
-            const end = begin + turnPoint + 2; // +2 is length and next char.
-            if (textArray[i] === "\n") {
-                begin += turnPoint;
-                turnPoint = 1;
-            } else if (this.isTextTurn(textArray, begin, end, width)) {
-                outTextArray.push("\n");
-                begin += turnPoint;
-                turnPoint = 0;
-            } else {
-                turnPoint++;
-            }
-        }
-        textState.text = outTextArray.join("");
-        this._window.processAllText(textState);
-        return textState.text.split("\n").length;
-    }
-}

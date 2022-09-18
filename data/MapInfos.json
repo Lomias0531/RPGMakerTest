@@ -56,10 +56,10 @@ null,
 {"id":54,"expanded":false,"name":"过道-主控室","order":50,"parentId":38,"scrollX":0,"scrollY":0},
 {"id":55,"expanded":false,"name":"主控室扫描间","order":51,"parentId":38,"scrollX":0,"scrollY":0},
 {"id":56,"expanded":false,"name":"扫描间室内","order":52,"parentId":38,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
-{"id":57,"expanded":false,"name":"主控室","order":53,"parentId":38,"scrollX":823.3333333333334,"scrollY":943.3333333333334},
+{"id":57,"expanded":false,"name":"主控室","order":53,"parentId":38,"scrollX":823.3333333333334,"scrollY":970},
 {"id":58,"expanded":false,"name":"小镇民居1","order":60,"parentId":32,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":59,"expanded":false,"name":"战棋战场测试","order":62,"parentId":0,"scrollX":823.3333333333334,"scrollY":624.6666666666666},
 {"id":60,"expanded":false,"name":"待定地下设施出入口","order":61,"parentId":45,"scrollX":958,"scrollY":624},
-{"id":61,"expanded":false,"name":"管道内","order":54,"parentId":38,"scrollX":1086,"scrollY":463.3333333333333},
+{"id":61,"expanded":false,"name":"管道内","order":54,"parentId":38,"scrollX":1096.6666666666667,"scrollY":452.6666666666667},
 {"id":62,"expanded":false,"name":"机场","order":4,"parentId":1,"scrollX":823.3333333333334,"scrollY":463.3333333333333}
 ]

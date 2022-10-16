@@ -69,35 +69,92 @@ var SubmitQuestRequestedItems = function (items, rewards) {
     return true;
 }
 
-//用于绘制UI的类
-class WindowDrawer {
-    constructor(window) {
-        this._window = window;
+var ResetEstinCombatSkills = function () {
+    if ($gameTroop._inBattle) {
+
     }
-    //测试，用于显示当前任务细节
-    DisplayQuestInfo = function (info) {
-        this._window.resetFontSettings();
-        const textState = this._window.createTextState(info, 5, 5, 100);
-        const textArray = textState.text.split("");
-        const outTextArray = [];
-        let begin = 0;
-        let turnPoint = 0;
-        for (let i = 0; i < textArray.length; i++) {
-            outTextArray.push(textArray[i]);
-            const end = begin + turnPoint + 2; // +2 is length and next char.
-            if (textArray[i] === "\n") {
-                begin += turnPoint;
-                turnPoint = 1;
-            } else if (this.isTextTurn(textArray, begin, end, width)) {
-                outTextArray.push("\n");
-                begin += turnPoint;
-                turnPoint = 0;
-            } else {
-                turnPoint++;
+}
+var ExecuteEstinCombatProgram = function () {
+    //选择过多少次锁定敌人为目标，就执行多少次伤害
+    for (var j = 0; j < $gameVariables.value(28); j++) {
+        var enemyIndex = Math.floor(Math.random() * $gameTroop.members().length); //获取随机敌人索引
+        var enemyID = $gameTroop.members()[enemyIndex].enemyId(); //获取选中敌人的ID
+        var enemyTraits = $dataEnemies[enemyID].traits; //获取选中敌人的特性列表，以数组形式返回
+        var damageValue = 0;
+        var Friends = $gameParty.members();
+        //获取攻击力数值，并且随机化乘数，具体系数为0.8至1之间随机数乘5，乘以叠加次数
+        for (var i = 0; i < Friends.length; i++) {
+            if (Friends[i].actorId() == 2) {
+                damageValue = Math.floor(Friends[i].atk * (0.8 + Math.random() * 0.2) * 5 * $gameVariables.value(25));
+                break;
             }
         }
-        textState.text = outTextArray.join("");
-        this._window.processAllText(textState);
-        return textState.text.split("\n").length;
+        //特性列表code为11是各种抗性的属性，dataId为2代表热能抗性
+        for (var i = 0; i < enemyTraits.length; i++) {
+            if (enemyTraits[i].code == 11) {
+                if (enemyTraits[i].dataId == 2) {
+                    damageValue = damageValue * enemyTraits[i].value;
+                    break;
+                }
+            }
+        }
+        //但是怎么显示伤害数字啊
+        $gameTroop.members()[enemyIndex].gainHp(damageValue * -1);
+        $gameTroop.members()[enemyIndex].onDamage(damageValue);
+        $gameTroop.members()[enemyIndex].performDamage();
     }
+    //选择过多少次己方作为目标，就执行多少次治疗
+    for (var j = 0; j < $gameVariables.value(30); j++) {
+        var friendIndex = Math.floor(Math.random() * $gameParty.aliveMembers().length);
+        var friends = $gameParty.members();
+        var healingStrength = 0;
+        //获取攻击力数值，随机化系数，具体系数为0.5至1之间随机数乘8，乘以叠加次数
+        for (var i = 0; i < friends.length; i++) {
+            if (friends[i].actorId() == 2) {
+                healingStrength = Math.floor(friends[i].atk * (Math.random() * 0.5 + 0.5) * 8 * $gameVariables.value(26));
+                break;
+            }
+        }
+        $gameParty.aliveMembers()[friendIndex].gainHp(healingStrength);
+    }
+}
+var RandomlyDamageEnemy = function () {
+    var enemyIndex = Math.floor(Math.random() * $gameTroop.aliveMembers().length); //获取随机敌人索引
+    var enemyID = $gameTroop.members()[enemyIndex].enemyId(); //获取选中敌人的ID
+    var enemyTraits = $dataEnemies[enemyID].traits; //获取选中敌人的特性列表，以数组形式返回
+    var damageValue = 0;
+    var Friends = $gameParty.members();
+    //获取攻击力数值，并且随机化乘数
+    for (var i = 0; i < Friends.length; i++) {
+        if (Friends[i].actorId() == 2) {
+            damageValue = Math.floor(Friends[i].atk * (0.8 + Math.random() * 0.2) * 5);
+            break;
+        }
+    }
+    //特性列表code为11是各种抗性的属性，dataId为2代表热能抗性
+    for (var i = 0; i < enemyTraits.length; i++) {
+        if (enemyTraits[i].code == 11) {
+            if (enemyTraits[i].dataId == 2) {
+                damageValue = damageValue * enemyTraits[i].value;
+                break;
+            }
+        }
+    }
+    //但是怎么显示伤害数字啊
+    $gameTroop.members()[enemyIndex].gainHp(damageValue * -1);
+    $gameTroop.members()[enemyIndex].onDamage(damageValue);
+    $gameTroop.members()[enemyIndex].performDamage();
+    return null;
+}
+var RandomlyHealAlly = function () {
+    var friendIndex = Math.floor(Math.random() * $gameParty.aliveMembers().length);
+    var friends = $gameParty.members();
+    var healingStrength = 0;
+    for (var i = 0; i < friends.length; i++) {
+        if (friends[i].actorId() == 2) {
+            healingStrength = Math.floor(friends[i].atk * (Math.random() * 0.5 + 0.5) * 8);
+            break;
+        }
+    }
+    $gameParty.aliveMembers()[friendIndex].gainHp(healingStrength);
 }

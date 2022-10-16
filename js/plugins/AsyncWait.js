@@ -46,7 +46,7 @@ async function opactiy_Gradient(id,opac) {
     
     for (var i = 0; i < 10; i++) {
         await f1(id, opac_old + opac_differ);
-        
+        opac_old = opac_old + opac_differ;
         
     }
 }

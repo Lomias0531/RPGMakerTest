@@ -1,7 +1,7 @@
 [
 null,
 {"id":1,"expanded":true,"name":"大地图测试","order":1,"parentId":0,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
-{"id":2,"expanded":false,"name":"室内地图测试1","order":2,"parentId":1,"scrollX":823.3333333333334,"scrollY":452.6666666666667},
+{"id":2,"expanded":false,"name":"室内地图测试1","order":2,"parentId":1,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":3,"expanded":false,"name":"过场动画测试","order":3,"parentId":1,"scrollX":676.5,"scrollY":456},
 {"id":4,"expanded":false,"name":"轨道炮打击测试","order":29,"parentId":8,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":5,"expanded":false,"name":"轨道空降","order":24,"parentId":8,"scrollX":834,"scrollY":904.6666666666666},

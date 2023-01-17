@@ -36,6 +36,7 @@ var CheckItemListRequired = function (items) {
     {
         var arr1 = arr[i].split(',');
         if ($gameParty.numItems($dataItems[arr1[0]]) < arr1[1]) {
+            $gameMessage.add("需要获取"+$dataItems[arr1[0]].name+arr1[1]+"个");
             return false;
         }
     }
@@ -157,4 +158,10 @@ var RandomlyHealAlly = function () {
         }
     }
     $gameParty.aliveMembers()[friendIndex].gainHp(healingStrength);
+}
+
+var InitRandomQuest = function()
+{
+    //尝试依据玩家等级或者相关参数设定随机赏金目标和奖励
+    var currentPlayerLevel = $gameParty.members()[0].level;
 }

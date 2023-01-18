@@ -11,6 +11,7 @@
  * functions list:
  *      opactiy_Gradient_speed(id,opac,speed)
  *      opactiy_Gradient(id,opac)   default
+ *      opactiy_Picture_Speed(id, opac)
  *
  * @param time
  * @type number
@@ -24,6 +25,15 @@ function f1(id,opac) {
         setTimeout(() => {
             resolve();
         }, 100);
+    });
+}
+//图片透明度更改
+function f2(id, opac) {
+    $gameScreen.picture(id)._opacity = opac;
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve();
+        }, 50);
     });
 }
 
@@ -48,5 +58,19 @@ async function opactiy_Gradient(id,opac) {
         await f1(id, opac_old + opac_differ);
         opac_old = opac_old + opac_differ;
         
+    }
+}
+//异步修改图片透明度,
+async function opactiy_Picture_Speed(id, opac) {
+    var opac_old = $gameScreen.picture(id)._opacity;
+    var opac_differ = parseInt((opac - opac_old) / 25);
+
+
+    for (var i = 0; i < 25; i++) {
+        await f2(id, opac_old + opac_differ);
+        console.log($gameScreen.picture(id)._opacity);
+        opac_old = opac_old + opac_differ;
+
+
     }
 }

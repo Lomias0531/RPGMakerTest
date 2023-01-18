@@ -56,7 +56,7 @@ null,
 {"id":54,"expanded":false,"name":"过道-主控室","order":50,"parentId":38,"scrollX":0,"scrollY":0},
 {"id":55,"expanded":false,"name":"主控室扫描间","order":51,"parentId":38,"scrollX":638.6666666666666,"scrollY":457.3333333333333},
 {"id":56,"expanded":false,"name":"扫描间室内","order":52,"parentId":38,"scrollX":638.6666666666666,"scrollY":457.3333333333333},
-{"id":57,"expanded":false,"name":"主控室","order":53,"parentId":38,"scrollX":834,"scrollY":464.6666666666667},
+{"id":57,"expanded":false,"name":"主控室","order":53,"parentId":38,"scrollX":638.6666666666666,"scrollY":490.6666666666667},
 {"id":58,"expanded":false,"name":"小镇民居1","order":60,"parentId":32,"scrollX":821.1428571428571,"scrollY":521.1428571428571},
 {"id":59,"expanded":false,"name":"战棋战场测试","order":63,"parentId":0,"scrollX":834,"scrollY":624.6666666666666},
 {"id":60,"expanded":false,"name":"待定地下设施出入口","order":61,"parentId":45,"scrollX":893.1428571428571,"scrollY":624},
@@ -64,6 +64,6 @@ null,
 {"id":62,"expanded":false,"name":"机场","order":4,"parentId":1,"scrollX":823.3333333333334,"scrollY":463.3333333333333},
 {"id":63,"expanded":false,"name":"野外夜谈","order":62,"parentId":45,"scrollX":638.6666666666666,"scrollY":446.6666666666667},
 {"id":64,"expanded":true,"name":"匆忙赶工的演示地图","order":64,"parentId":0,"scrollX":649.3333333333334,"scrollY":612},
-{"id":65,"expanded":false,"name":"演示地图-战斗","order":65,"parentId":64,"scrollX":823.3333333333334,"scrollY":612.6666666666666},
-{"id":66,"expanded":false,"name":"演示地图-剧情","order":66,"parentId":64,"scrollX":649.3333333333334,"scrollY":560}
+{"id":65,"expanded":false,"name":"演示地图-战斗","order":65,"parentId":64,"scrollX":638.6666666666666,"scrollY":613.3333333333334},
+{"id":66,"expanded":false,"name":"演示地图-剧情","order":66,"parentId":64,"scrollX":638.6666666666666,"scrollY":560}
 ]

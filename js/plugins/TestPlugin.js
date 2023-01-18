@@ -166,16 +166,19 @@ var InitRandomQuest = function()
     var currentPlayerLevel = $gameParty.members()[0].level;
 
 }
-//检查战斗结束时是逃跑还是胜利
+//检查战斗结束时已经击败多少任务目标
 var CheckIsVictory = function(){
-    if($gamrParty.inBattle())
+    if(!$gameParty.inBattle())
     {
-        if($gameTroop.isAllDead()())
+        for(var i = 0;i<$gameTroop.deadMembers().length;i++)
         {
-            return true;
-        }else
-        {
-            return false;
+            if($gameTroop.deadMembers()[i].enemyId() == $gameVariables.value(42))
+            {
+                var num = $gameVariables.value(43);
+                num +=1;
+                $gameVariables.setValue(43,num);
+            }
         }
+        $gameSwitches.setValue(47,false);
     }
 }

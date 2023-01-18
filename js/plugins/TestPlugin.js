@@ -174,11 +174,17 @@ var CheckIsVictory = function(){
         {
             if($gameTroop.deadMembers()[i].enemyId() == $gameVariables.value(42))
             {
-                var num = $gameVariables.value(43);
+                var num = $gameVariables.value(46);
                 num +=1;
-                $gameVariables.setValue(43,num);
+                $gameVariables.setValue(46,num);
             }
         }
         $gameSwitches.setValue(47,false);
     }
+}
+var SetRandomBountyRange = function(bountyId)
+{
+    var bountyArr = bountyId.split('|');
+    var resultIndex = Math.random() * bountyArr.length;
+    $gameVariables.setValue(42,bountyArr[resultIndex]);
 }

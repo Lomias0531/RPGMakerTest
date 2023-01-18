@@ -164,4 +164,18 @@ var InitRandomQuest = function()
 {
     //尝试依据玩家等级或者相关参数设定随机赏金目标和奖励
     var currentPlayerLevel = $gameParty.members()[0].level;
+
+}
+//检查战斗结束时是逃跑还是胜利
+var CheckIsVictory = function(){
+    if($gamrParty.inBattle())
+    {
+        if($gameTroop.isAllDead()())
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
 }

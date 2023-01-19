@@ -277,7 +277,7 @@ var InitRandomQuest = function(bountyIdList, baseBountyNum, requestIdList, baseR
                         $gameMessage.newPage();
                         $gameMessage.add("任务完成。");
                         $gameMessage.newPage();
-                        $gameParty.loseItem($dataItems[$gameVariables.value(42),$gameVariables.value(43)]);
+                        $gameParty.loseItem($dataItems[$gameVariables.value(42)],$gameVariables.value(43),false);
                         $gameParty.gainItem($dataItems[$gameVariables.value(44)],$gameVariables.value(45));
                         $gameParty.gainGold($gameVariables.value(47));
                         $gameSwitches.setValue(7,false);
@@ -317,7 +317,6 @@ var InitRandomQuestSimple = function(bountyIdList, baseBountyNum, requestIdList,
     var rewardIndex = Math.floor(Math.random() * rewardArr.length);
     $gameVariables.setValue(44,Number(rewardArr[rewardIndex]));
     var rewardNum = Math.floor(baseRewardNum * (0.5 + Math.random())) + 1;
-    console.log(rewardNum);
     $gameVariables.setValue(45,Number(rewardNum));
     var rewardCah = Math.floor(baseRewardCash * (0.5 + Math.random()));
     $gameVariables.setValue(47,Number(rewardCah));
@@ -382,7 +381,7 @@ var ConfirmQuestStatus = function()
                         $gameMessage.newPage();
                         $gameMessage.add("任务完成。");
                         $gameMessage.newPage();
-                        $gameParty.loseItem($dataItems[$gameVariables.value(42),$gameVariables.value(43)]);
+                        $gameParty.loseItem($dataItems[$gameVariables.value(42)],$gameVariables.value(43),false);
                         $gameParty.gainItem($dataItems[$gameVariables.value(44)],$gameVariables.value(45));
                         $gameParty.gainGold($gameVariables.value(47));
                         $gameSwitches.setValue(7,false);

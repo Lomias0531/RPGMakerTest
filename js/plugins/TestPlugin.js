@@ -396,3 +396,68 @@ var ConfirmQuestStatus = function()
                 }
         }
 }
+var LetsStartCooking = function()
+{
+    //每种食材可以烹饪出的料理
+    var recipe = new Map();
+    recipe.set(57,[64,70,71,72,67,68]);
+    recipe.set(58,[63,70,73,75,67,68]);
+    recipe.set(61,[65,71,73,74,75,67,68]);
+    recipe.set(62,[66,72,74,67,68]);
+    //可以食用的食材
+    var edible = [57,58,61,62];
+    //未被使用的食材
+    var materialsNotUsed = [57,58,61,62];
+    var creepy = false;
+    for(var t = 1;t<=5;t++)
+    {
+        for(var d = 0;d<materialsNotUsed.length;d++)
+        {
+            if(materialsNotUsed[d] == $gameVariables.value(t))
+            {
+                materialsNotUsed.splice(d,1);
+                break;
+            }
+        }
+    }
+    console.log(materialsNotUsed);
+    if(edible.includes($gameVariables.value(1)))
+    {
+        var availableCollection = recipe.get($gameVariables.value(1));
+    }else
+    {
+        var availableCollection = [68];
+        creepy = true;
+    }
+    //取每种食材可烹饪料理的交集
+    for(var i = 2;i<=5;i++)
+    {
+        if($gameVariables.value(i) != 0)
+        {
+            if(edible.includes($gameVariables.value(i)))
+            {
+                availableCollection = availableCollection.filter(value =>recipe.get($gameVariables.value(i)).includes(value));
+            }else
+            {
+                availableCollection = availableCollection.filter(value =>[68].includes(value));
+                creepy = true;
+            }
+        }
+    }
+    console.log(availableCollection);
+    if(creepy)
+    {
+        availableCollection = availableCollection.filter(value =>[68].includes(value));
+    }else
+    {
+        for(var i = 0;i< materialsNotUsed.length;i++)
+        {
+            availableCollection = availableCollection.filter(value => !recipe.get(materialsNotUsed[i]).includes(value))
+        }
+    }
+    console.log(availableCollection);
+    var index = Math.floor(availableCollection.length * Math.random());
+    $gameParty.gainItem($dataItems[availableCollection[index]],1);
+    $gameMessage.newPage();
+    $gameMessage.add("获得了" + $dataItems[availableCollection[index]].name);
+}

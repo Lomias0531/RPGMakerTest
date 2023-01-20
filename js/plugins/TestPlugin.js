@@ -173,9 +173,9 @@ var InitRandomQuest = function(bountyIdList, baseBountyNum, requestIdList, baseR
             var rewardArr = rewardList.toString().split('|');
             var rewardIndex = Math.floor(Math.random() * rewardArr.length);
             $gameVariables.setValue(44,Number(rewardArr[rewardIndex]));
-            var rewardNum = Math.floor(baseRewardNum * (0.5 + Math.random));
+            var rewardNum = Math.floor(baseRewardNum * (0.5 + Math.random)) + 1;
             $gameVariables.setValue(45,Number(rewardNum));
-            var rewardCah = Math.floor(baseRewardCash * (0.5 + Math.random()));
+            var rewardCah = Math.floor(baseRewardCash * (0.5 + Math.random())) + 1;
             $gameVariables.setValue(47,Number(rewardCah));
 
             switch(questType)
@@ -186,11 +186,11 @@ var InitRandomQuest = function(bountyIdList, baseBountyNum, requestIdList, baseR
                     var bountyArr = bountyIdList.toString().split('|');
                     var resultIndex = Math.floor(Math.random() * bountyArr.length);
                     $gameVariables.setValue(42,bountyArr[resultIndex]);
-                    var bountyNum = Math.floor(baseBountyNum * (0.5 + Math.random()));
+                    var bountyNum = Math.floor(baseBountyNum * (0.5 + Math.random())) + 1;
                     $gameVariables.setValue(43,bountyNum);
                     $gameMessage.newPage();
                     $gameMessage.add("需要击败"+$dataEnemies[$gameVariables.value(42)].name+$gameVariables.value(43)+"个");
-                    $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(45) + "信用点");
+                    $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
                     break;
                 case 1:
                     //需求物品
@@ -198,11 +198,11 @@ var InitRandomQuest = function(bountyIdList, baseBountyNum, requestIdList, baseR
                     var reqArr = requestIdList.toString().split('|');
                     var resultIndex = Math.floor(Math.random() * reqArr.length);
                     $gameVariables.setValue(42,reqArr[resultIndex]);
-                    var reqNum = Math.floor(baseRequestNum * (0.5 + Math.random()));
+                    var reqNum = Math.floor(baseRequestNum * (0.5 + Math.random())) + 1;
                     $gameVariables.setValue(43,reqNum);
                     $gameMessage.newPage();
                     $gameMessage.add("需要获取"+$dataItems[$gameVariables.value(42)].name+$gameVariables.value(43)+"个");
-                    $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(45) + "信用点");
+                    $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
                     break;
             }
 
@@ -261,12 +261,12 @@ var InitRandomQuest = function(bountyIdList, baseBountyNum, requestIdList, baseR
                         $gameParty.gainItem($dataItems[$gameVariables.value(44)],$gameVariables.value(45));
                         $gameParty.gainGold($gameVariables.value(47));
                         $gameSwitches.setValue(7,false);
-                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(45) + "信用点");
+                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
                     }else
                     {
                         $gameMessage.newPage();
                         $gameMessage.add("需要击败"+$dataEnemies[$gameVariables.value(42)].name+$gameVariables.value(43)+"个");
-                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(45) + "信用点");
+                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
                     }
                     break;
                 }
@@ -277,16 +277,16 @@ var InitRandomQuest = function(bountyIdList, baseBountyNum, requestIdList, baseR
                         $gameMessage.newPage();
                         $gameMessage.add("任务完成。");
                         $gameMessage.newPage();
-                        $gameParty.loseItem($dataItems[$gameVariables.value(42),$gameVariables.value(43)]);
+                        $gameParty.loseItem($dataItems[$gameVariables.value(42)],$gameVariables.value(43),false);
                         $gameParty.gainItem($dataItems[$gameVariables.value(44)],$gameVariables.value(45));
                         $gameParty.gainGold($gameVariables.value(47));
                         $gameSwitches.setValue(7,false);
-                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(45) + "信用点");
+                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
                     }else
                     {
                         $gameMessage.newPage();
                         $gameMessage.add("需要获取"+$dataItems[$gameVariables.value(42)].name+$gameVariables.value(43)+"个");
-                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(45) + "信用点");
+                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
                     }
                     break;
                 }
@@ -309,9 +309,155 @@ var CheckIsVictory = function(){
         $gameSwitches.setValue(47,false);
     }
 }
-var SetRandomBounty = function(bountyId, baseBountyNum)
+var InitRandomQuestSimple = function(bountyIdList, baseBountyNum, requestIdList, baseRequestNum, rewardList, baseRewardNum, baseRewardCash)
 {
-    var bountyArr = bountyId.split('|');
-    var resultIndex = Math.random() * bountyArr.length;
-    $gameVariables.setValue(42,bountyArr[resultIndex]);
+    var questType = Math.floor(Math.random() * 2);
+
+    var rewardArr = rewardList.toString().split('|');
+    var rewardIndex = Math.floor(Math.random() * rewardArr.length);
+    $gameVariables.setValue(44,Number(rewardArr[rewardIndex]));
+    var rewardNum = Math.floor(baseRewardNum * (0.5 + Math.random())) + 1;
+    $gameVariables.setValue(45,Number(rewardNum));
+    var rewardCah = Math.floor(baseRewardCash * (0.5 + Math.random()));
+    $gameVariables.setValue(47,Number(rewardCah));
+
+    switch(questType)
+    {
+        case 0:
+            //怪物悬赏
+            $gameVariables.setValue(41,0);
+            var bountyArr = bountyIdList.toString().split('|');
+            var resultIndex = Math.floor(Math.random() * bountyArr.length);
+            $gameVariables.setValue(42,bountyArr[resultIndex]);
+            var bountyNum = Math.floor(baseBountyNum * (0.5 + Math.random())) + 1;
+            $gameVariables.setValue(43,bountyNum);
+            $gameMessage.newPage();
+            $gameMessage.add("需要击败"+$dataEnemies[$gameVariables.value(42)].name+$gameVariables.value(43)+"个");
+            $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
+            break;
+        case 1:
+            //需求物品
+            $gameVariables.setValue(41,1);
+            var reqArr = requestIdList.toString().split('|');
+            var resultIndex = Math.floor(Math.random() * reqArr.length);
+            $gameVariables.setValue(42,reqArr[resultIndex]);
+            var reqNum = Math.floor(baseRequestNum * (0.5 + Math.random())) + 1;
+            $gameVariables.setValue(43,reqNum);
+            $gameMessage.newPage();
+            $gameMessage.add("需要获取"+$dataItems[$gameVariables.value(42)].name+$gameVariables.value(43)+"个");
+            $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
+            break;
+    }
+}
+var ConfirmQuestStatus = function()
+{
+    switch($gameVariables.value(41))
+        {
+            case 0:
+                {
+                    var bountyFinishedNum = $gameVariables.value(46);
+                    var bountyRequestedNum = $gameVariables.value(43);
+                    if(bountyFinishedNum == bountyRequestedNum)
+                    {
+                        $gameMessage.newPage();
+                        $gameMessage.add("任务完成。");
+                        $gameMessage.newPage();
+                        $gameParty.gainItem($dataItems[$gameVariables.value(44)],$gameVariables.value(45));
+                        $gameParty.gainGold($gameVariables.value(47));
+                        $gameSwitches.setValue(7,false);
+                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
+                    }else
+                    {
+                        $gameMessage.newPage();
+                        $gameMessage.add("需要击败"+$dataEnemies[$gameVariables.value(42)].name+$gameVariables.value(43)+"个");
+                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
+                    }
+                    break;
+                }
+            case 1:
+                {
+                    if($gameParty.numItems($dataItems[$gameVariables.value(42)]) == $gameVariables.value(43))
+                    {
+                        $gameMessage.newPage();
+                        $gameMessage.add("任务完成。");
+                        $gameMessage.newPage();
+                        $gameParty.loseItem($dataItems[$gameVariables.value(42)],$gameVariables.value(43),false);
+                        $gameParty.gainItem($dataItems[$gameVariables.value(44)],$gameVariables.value(45));
+                        $gameParty.gainGold($gameVariables.value(47));
+                        $gameSwitches.setValue(7,false);
+                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
+                    }else
+                    {
+                        $gameMessage.newPage();
+                        $gameMessage.add("需要获取"+$dataItems[$gameVariables.value(42)].name+$gameVariables.value(43)+"个");
+                        $gameMessage.add("任务奖励：" + $dataItems[$gameVariables.value(44)].name + " " + $gameVariables.value(45) + "个，以及" + $gameVariables.value(47) + "信用点");
+                    }
+                    break;
+                }
+        }
+}
+var LetsStartCooking = function()
+{
+    //每种食材可以烹饪出的料理
+    var recipe = new Map();
+    recipe.set(57,[64,70,71,72,67,68]);
+    recipe.set(58,[63,70,73,75,67,68]);
+    recipe.set(61,[65,71,73,74,75,67,68]);
+    recipe.set(62,[66,72,74,67,68]);
+    //可以食用的食材
+    var edible = [57,58,61,62];
+    //未被使用的食材
+    var materialsNotUsed = [57,58,61,62];
+    var creepy = false;
+    for(var t = 1;t<=5;t++)
+    {
+        for(var d = 0;d<materialsNotUsed.length;d++)
+        {
+            if(materialsNotUsed[d] == $gameVariables.value(t))
+            {
+                materialsNotUsed.splice(d,1);
+                break;
+            }
+        }
+    }
+    console.log(materialsNotUsed);
+    if(edible.includes($gameVariables.value(1)))
+    {
+        var availableCollection = recipe.get($gameVariables.value(1));
+    }else
+    {
+        var availableCollection = [68];
+        creepy = true;
+    }
+    //取每种食材可烹饪料理的交集
+    for(var i = 2;i<=5;i++)
+    {
+        if($gameVariables.value(i) != 0)
+        {
+            if(edible.includes($gameVariables.value(i)))
+            {
+                availableCollection = availableCollection.filter(value =>recipe.get($gameVariables.value(i)).includes(value));
+            }else
+            {
+                availableCollection = availableCollection.filter(value =>[68].includes(value));
+                creepy = true;
+            }
+        }
+    }
+    console.log(availableCollection);
+    if(creepy)
+    {
+        availableCollection = availableCollection.filter(value =>[68].includes(value));
+    }else
+    {
+        for(var i = 0;i< materialsNotUsed.length;i++)
+        {
+            availableCollection = availableCollection.filter(value => !recipe.get(materialsNotUsed[i]).includes(value))
+        }
+    }
+    console.log(availableCollection);
+    var index = Math.floor(availableCollection.length * Math.random());
+    $gameParty.gainItem($dataItems[availableCollection[index]],1);
+    $gameMessage.newPage();
+    $gameMessage.add("获得了" + $dataItems[availableCollection[index]].name);
 }

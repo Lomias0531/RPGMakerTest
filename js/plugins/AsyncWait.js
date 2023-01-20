@@ -74,3 +74,5 @@ async function opactiy_Picture_Speed(id, opac) {
 
     }
 }
+
+

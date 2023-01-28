@@ -420,7 +420,6 @@ var LetsStartCooking = function()
             }
         }
     }
-    console.log(materialsNotUsed);
     if(edible.includes($gameVariables.value(1)))
     {
         var availableCollection = recipe.get($gameVariables.value(1));
@@ -444,18 +443,18 @@ var LetsStartCooking = function()
             }
         }
     }
-    console.log(availableCollection);
     if(creepy)
     {
+        //如果有诡异的玩意就直接出马赛克料理
         availableCollection = availableCollection.filter(value =>[68].includes(value));
     }else
     {
+        //从可执行料理集中排除未采用食材可以制成的
         for(var i = 0;i< materialsNotUsed.length;i++)
         {
             availableCollection = availableCollection.filter(value => !recipe.get(materialsNotUsed[i]).includes(value))
         }
     }
-    console.log(availableCollection);
     var index = Math.floor(availableCollection.length * Math.random());
     $gameParty.gainItem($dataItems[availableCollection[index]],1);
     $gameMessage.newPage();
